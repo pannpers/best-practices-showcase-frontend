@@ -10,7 +10,8 @@
   "dependencies": {
     "aurelia-animator-css": "^1.0.4",
     "aurelia-bootstrapper": "^2.3.3",
-    "firebase": "^7.23.0"
+    "firebase": "^7.23.0",
+    "firebaseui": "^4.7.0"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",

@@ -1,11 +1,11 @@
+import { PLATFORM } from 'aurelia-pal'
 import { Router, RouterConfiguration } from 'aurelia-router'
 import { AuthService } from 'services/auth'
-import {PLATFORM} from 'aurelia-pal'
 
 export class App {
   router: Router
 
-  constructor(private auth: AuthService) {}
+  constructor (private auth: AuthService) { }
 
   configureRouter(config: RouterConfiguration, router: Router) {
     config.options.pushState = true

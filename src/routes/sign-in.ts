@@ -1,11 +1,16 @@
-import { AuthService } from '../services/auth'
 import { autoinject } from 'aurelia-framework'
+import { getLogger } from 'aurelia-logging'
+
+import { AuthService } from '../services/auth'
 
 @autoinject
 export class SignIn {
-  constructor(private auth: AuthService) {}
+  private readonly logger = getLogger(SignIn.name)
+
+  constructor (private auth: AuthService) {
+  }
 
   attached() {
-    // this.auth.renderSignIn()
+    this.auth.renderSignIn()
   }
 }

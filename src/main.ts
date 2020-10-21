@@ -1,10 +1,10 @@
-import {Aurelia} from 'aurelia-framework';
-import * as environment from '../config/environment.json';
-import {PLATFORM} from 'aurelia-pal';
-
+import { Aurelia } from 'aurelia-framework';
+import { PLATFORM } from 'aurelia-pal';
 import * as firebase from 'firebase/app'
 // import * as firebaseui from 'firebaseui'
 import { AuthService } from 'services/auth';
+
+import * as environment from '../config/environment.json';
 
 export function configure(aurelia: Aurelia): void {
   aurelia.use

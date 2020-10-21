@@ -50,3 +50,27 @@ The two following flags are useful when using `--start` flag:
 
 
 **PS:** It is also possible to mix the flags `au cypress --run --start --port 7070 --host 127.0.0.1`
+
+
+# Appendix
+
+## Linter
+
+```sh
+$ npm i -D eslint prettier eslint-config-prettier
+```
+
+- https://prettier.io/docs/en/integrating-with-linters.html
+
+> When searching for both Prettier and your linter on the Internet you’ll probably find more related projects. These are generally not recommended, but can be useful in certain circumstances.
+>
+> First, we have plugins that let you run Prettier as if it was a linter rule:
+>
+> - eslint-plugin-prettier
+> - tslint-plugin-prettier
+> - stylelint-prettier
+
+
+```sh
+$ npm i -D typescript @typescript-eslint/{parser,eslint-plugin}
+```

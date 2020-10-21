@@ -1,11 +1,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "declaration": false,
-    "types": [
-      "node",
-      "jest"
-    ],
+    "module": "esnext",
     "typeRoots": [
       "./node_modules/@types"
     ],

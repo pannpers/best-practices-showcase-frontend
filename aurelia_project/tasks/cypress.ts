@@ -1,7 +1,7 @@
 import * as cypress from 'cypress';
 import * as config from '../../cypress.config';
 import { CLIOptions } from 'aurelia-cli';
-import { serve as runAppServer, shutdownDevServer } from './run';
+import { default as runAppServer, shutdownDevServer } from './run';
 
 const runCypress = (cb) => {
   if (CLIOptions.hasFlag('run')) {

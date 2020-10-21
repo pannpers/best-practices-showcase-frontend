@@ -1,5 +1,7 @@
 import { Router, RouterConfiguration } from 'aurelia-router'
 import { AuthService } from 'services/auth'
+import {PLATFORM} from 'aurelia-pal'
+
 export class App {
   router: Router
 
@@ -10,8 +12,8 @@ export class App {
     config.options.root = '/'
 
     config.map([
-      { route: '', name: 'home', moduleId: 'routes/home', title: 'Home' },
-      { route: 'sign-in', name: 'sign-in', moduleId: 'routes/sign-in', title: 'Sign In' },
+      { route: '', name: 'home', moduleId: PLATFORM.moduleName('routes/home'), title: 'Home' },
+      { route: 'sign-in', name: 'sign-in', moduleId: PLATFORM.moduleName('routes/sign-in'), title: 'Sign In' },
     ])
 
     config.mapUnknownRoutes('routes/home')

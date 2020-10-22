@@ -1,0 +1,24 @@
+<template>
+  <article>
+    <head>
+      <h1>Create To-Do</h1>
+    </head>
+    <section>
+      <form submit.trigger="addTodo()">
+        <input type="text" value.bind="title" />
+        <button type="submit" disabled.bind="!title">Add Todo</button>
+      </form>
+
+      <ul>
+        <li repeat.for="todo of todos">
+          <input type="checkbox" checked.bind="todo.done" />
+          <span css="text-decoration: ${todo.done ? 'line-through' : 'none'}"> ${todo.title} </span>
+
+          <button click.trigger="removeTodo(todo)">Remove</button>
+        </li>
+      </ul>
+
+      <button type="submit" disabled.bind="todos.length === 0" click.delegate="save()">Save</button>
+    </section>
+  </article>
+</template>

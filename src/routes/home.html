@@ -1,3 +1,11 @@
 <template>
+  <article>
+    <h1>Best Practices Showcase</h1>
 
+    <section if.bind="auth.isSignedIn">
+      <a route-href="route: todo-create; params.bind: { uid: auth.user.uid }">
+        <button type="button">Create Todo</button>
+      </a>
+    </section>
+  </article>
 </template>

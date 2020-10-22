@@ -1,10 +1,10 @@
 import { Aurelia } from 'aurelia-framework';
 import { PLATFORM } from 'aurelia-pal';
 import * as firebase from 'firebase/app'
-// import * as firebaseui from 'firebaseui'
 import { AuthService } from 'services/auth';
 
 import * as environment from '../config/environment.json';
+import { FirebaseApp } from './services/firebase/firebase'
 
 export function configure(aurelia: Aurelia): void {
   aurelia.use
@@ -18,10 +18,9 @@ export function configure(aurelia: Aurelia): void {
   }
 
   const firebaseApp = firebase.initializeApp(environment.firebaseConfig)
-  const firebaseAuth = firebaseApp.auth()
-  // const auth = new AuthService(firebaseAuth, new firebaseui.auth.AuthUI(firebaseAuth))
-  const auth = new AuthService(firebaseApp.auth())
-  aurelia.container.registerInstance(AuthService, auth)
+  aurelia.container.registerInstance(FirebaseApp, new FirebaseApp(firebaseApp))
+  // const auth = new AuthService(firebaseApp.auth())
+  // aurelia.container.registerInstance(AuthService, auth)
 
   aurelia.start().then(() => aurelia.setRoot(PLATFORM.moduleName('app')));
 }

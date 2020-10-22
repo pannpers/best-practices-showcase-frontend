@@ -1,3 +1,27 @@
 <template>
-  <router-view></router-view>
+  <header>
+    <h3>Site Map</h3>
+    <ul>
+      <li class="${nav.isActive ? 'active' : ''" repeat.for="nav of router.navigation">
+        <a href.bind="nav.href">${nav.title}</a>
+
+        <code if.bind="nav.settings.permissions"> ${nav.settings.permissions | stringify} </code>
+      </li>
+    </ul>
+
+    <section if.bind="!auth.isSignedIn">
+      <a route-href="route: sign-in">
+        <button type="button">Sign In</button>
+      </a>
+    </section>
+
+    <section else>
+      <h2>Hello ${auth.user.displayName}!!</h2>
+      User Permissions: <code>${auth.user.permissions | stringify}</code>
+    </section>
+  </header>
+
+  <main>
+    <router-view></router-view>
+  </main>
 </template>

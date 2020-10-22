@@ -7,10 +7,9 @@ import { AuthService } from '../services/auth'
 export class SignIn {
   private readonly logger = getLogger(SignIn.name)
 
-  constructor (private auth: AuthService) {
-  }
+  constructor (private auth: AuthService) { }
 
-  attached() {
+  attached(): void {
     this.auth.renderSignIn()
   }
 }

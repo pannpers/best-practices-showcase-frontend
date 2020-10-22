@@ -1,0 +1,19 @@
+<template>
+  <article>
+    <head>
+      <h1>Admin</h1>
+    </head>
+
+    <section>
+      <ul repeat.for="user of users">
+        <li>
+          ${user.name} (${user.uid})
+          <a route-href="route: admin-edit; params.bind: { uid: user.uid }">
+            <button>Edit</button>
+          </a>
+          <p>Permissions: <code>${user.permissions | stringify}</code></p>
+        </li>
+      </ul>
+    </section>
+  </article>
+</template>

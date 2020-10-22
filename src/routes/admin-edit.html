@@ -1,0 +1,21 @@
+<template>
+  <article if.bind="auth.isSignedIn">
+    <head>
+      <h1>Edit User Permissions</h1>
+    </head>
+
+    <section>
+      <h2>ToDo Permissions</h2>
+    </section>
+
+    <section>
+      <h2>Admin Permissions</h2>
+      <ul>
+        <li repeat.for="selector of permissionSelector">
+          <input type="checkbox" checked.bind="selector.enabled" />
+          <span>${selector.name} <code>${selector.bit}</code></span>
+        </li>
+      </ul>
+    </section>
+  </article>
+</template>

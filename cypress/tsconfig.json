@@ -3,11 +3,8 @@
     "strict": true,
     "baseUrl": "../node_modules",
     "target": "es5",
-    "types": [
-      "cypress"
-    ]
+    "experimentalDecorators": true,
+    "types": ["cypress"]
   },
-  "include": [
-    "**/*.ts"
-  ]
+  "include": ["**/*.ts"]
 }

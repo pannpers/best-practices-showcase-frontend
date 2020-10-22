@@ -21,7 +21,7 @@
   "peacock.color": "#6D50A2",
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll": true,
+    "source.fixAll": true
   },
-  // "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
 }

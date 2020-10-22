@@ -15,7 +15,7 @@ module.exports = {
     ecmaVersion: 2019,
     sourceType: 'module', // allow for the use of imports
     project: './tsconfig.json',
-    'tsconfigRootDir': '.',
+    tsconfigRootDir: '.',
   },
   plugins: [
     '@typescript-eslint',
@@ -37,8 +37,8 @@ module.exports = {
       node: {
         paths: ['src'],
         extensions: ['.js', '.ts', 'd.ts'],
-      }
-    }
+      },
+    },
   },
   rules: {
     // https://github.com/lydell/eslint-plugin-simple-import-sort#usage
@@ -46,6 +46,8 @@ module.exports = {
     'sort-imports': 'off',
     'import/order': 'off',
     'lines-between-class-members': 'off',
+    'no-bitwise': 'off',
+    'no-shadow': 'off',
     'no-useless-constructor': 'off',
     'no-unused-expressions': 'warn',
     'no-param-reassign': 'warn',
@@ -57,4 +59,4 @@ module.exports = {
     '@typescript-eslint/explicit-member-accessibility': 'off',
     '@typescript-eslint/no-parameter-properties': 'off',
   },
-};
+}
